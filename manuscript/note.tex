@@ -1,0 +1,568 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\hypersetup{pdftitle={Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong},pdfauthor={Haobo Ma; Wenlin Zhang}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\vp}{v_p}
+\title{Alternative proofs of Hohn's divisibility conjectures\\
+after Kontorovich and Stong}
+\author{Haobo Ma$^1$ \and Wenlin Zhang$^{2,1}$}
+\date{18 November 2026}
+\begin{document}
+\maketitle
+\begin{center}
+\small $^1$ChronoAI Pte Ltd, Singapore\\
+$^2$National University of Singapore, Singapore
+\end{center}
+\begin{abstract}
+For Charles L. Hohn's conjectures in OEIS A390148, revision 23
+(17 November 2025), COMMENTS, paragraphs 5--9, we give alternative
+proofs of the divisibility assertions using arithmetic already present in
+Kontorovich (2012, Lemma 2.11) and Stong (2015, p.~76)
+\cite{kontorovich,stong}, and prove the repeated-radius count.
+Every positive prime power dividing one radius divides exactly one or two
+other coordinates. The conclusion holds for every
+prime, not just primes congruent to one modulo three. At the prime three the
+radius valuations are $(0,e,e,e)$ with $e>0$; at any prime congruent to two
+modulo three that occurs, they are $(0,2m,2m,2m)$ with $m>0$, up to
+permutation. The same argument proves the prime-support assertion in Hohn's
+gcd formula for the fourth radius. For the linked circle
+array, an elementary parametrization proves the cube-or-twice-a-cube
+difference conjecture. All these statements have complete written proofs.
+\end{abstract}
+
+\section{The equation and the result}
+Hohn's array \cite{hohn} consists of ordered quadruples of positive integer
+radii with common gcd one satisfying
+\begin{equation}\label{eq:radii}
+ \left(\sum_{i=1}^4\frac1{r_i}\right)^2
+       =3\sum_{i=1}^4\frac1{r_i^2}.
+\end{equation}
+Here ``common gcd one'' does not mean pairwise coprime. Equation
+\eqref{eq:radii} is the Soddy--Gossett equation in three dimensions, with
+the curvature of a tangent plane set to zero; see \cite[Theorem 1.2]{lmw}.
+Our arguments concern all positive integer solutions of this equation,
+without requiring an ordering or distinct coordinates.
+
+Write $v_p(n)$ for the exponent of the prime $p$ in a positive integer $n$.
+When differences of integers occur, set $v_p(0)=+\infty$ and
+$v_p(n)=v_p(|n|)$ for $n\ne0$. Each coordinate is counted separately,
+including coordinates with equal radii.
+
+\begin{theorem}\label{thm:main}
+Let $r_1,r_2,r_3,r_4$ be positive integers satisfying \eqref{eq:radii}
+and having common gcd one. For any prime $p$, put
+$E=\max_i v_p(r_i)$.
+\begin{enumerate}
+\item If $p\equiv1\pmod3$ and $E>0$, the maximum $E$ occurs at least
+twice, and $\min_i v_p(r_i)=0$.
+\item For $p=3$, one has $E>0$ and the valuations are $(0,E,E,E)$,
+up to permutation.
+\item If $p\equiv2\pmod3$ and $E>0$, including $p=2$, the valuations
+are $(0,E,E,E)$ up to permutation, and $E$ is even.
+\end{enumerate}
+Consequently, for every prime $p$, integer $k\ge1$, and coordinate $i$
+with $p^k\mid r_i$, exactly one or two indices $j\ne i$ satisfy
+$p^k\mid r_j$.
+\end{theorem}
+
+The last sentence is Hohn's split-prime assertion with its prime restriction
+removed. The additional valuation conclusions address the adjacent comments
+for $3$ and for primes congruent to $2$ modulo $3$. They concern every
+positive exponent, rather than a finite initial segment of the array.
+The split-prime clause says ``1 or 2 of the other terms'' at
+\cite[COMMENTS, paragraph 6]{hohn}; paragraphs 5 and 7 give the other
+two valuation assertions. The corresponding lines in the
+\href{https://raw.githubusercontent.com/oeis/oeisdata/d4ade8b4ca7c6ff0ac8931532918fd4f6176805e/seq/A390/A390148.seq}{fixed sequence text}
+are 10--12. Paragraph 8 (line 13) gives the repeated-radius count below.
+
+\paragraph{Earlier arithmetic.}
+Kontorovich's primitive Soddy-quintuple classification modulo $3$
+\cite[Lemma 2.11, p.~9]{kontorovich}, first released in 2012, applies
+to $(0,b_1,b_2,b_3,b_4)$ in \eqref{eq:curvatures}. It implies the
+three-unit curvature pattern and hence our $3$-adic radius assertion.
+McGonagle and Northshield's earlier article \cite[Section 6]{mcgonagle}
+states the norm conclusion in a three-dimensional sketch.
+Stong's January 2015 solution of Northshield's problem
+\cite[p.~76]{stong} supplies the inert-prime norm argument;
+Northshield gave a geometric proof in March 2015
+\cite[Corollary 4.6, p.~14]{northshield}.
+These are earlier results in equivalent arithmetic variables, not
+assertions about Hohn's later sequence. We give the translation explicitly
+and retain a direct proof. The sphere and circle repetition classifications
+and the finite membership consequence are additional results here;
+no priority is claimed.
+
+\section{Integral curvatures and the proof}
+Put
+\begin{equation}\label{eq:curvatures}
+ L=\mathop{\rm lcm}(r_1,r_2,r_3,r_4),\qquad b_i=L/r_i.
+\end{equation}
+These are positive integers, and clearing denominators in
+\eqref{eq:radii} gives
+\begin{equation}\label{eq:integral}
+ \left(\sum_{i=1}^4 b_i\right)^2=3\sum_{i=1}^4 b_i^2.
+\end{equation}
+Their common gcd is one. Indeed, if $d$ divides every $b_i$, then
+$L/d=r_i(b_i/d)$ is an integer common multiple of all the $r_i$.
+Minimality of $L$ forces $d=1$. For every prime $p$,
+\begin{equation}\label{eq:orders}
+ v_p(b_i)+v_p(r_i)=v_p(L)=E.
+\end{equation}
+In particular, a curvature not divisible by $p$ corresponds to a radius of
+maximal $p$-adic order. Primitivity of the radii gives
+$\min_i v_p(r_i)=0$.
+
+\begin{lemma}\label{lem:norm}
+If $p\equiv2\pmod3$ is prime, then
+$x^2-xy+y^2=0$ in $\mathbb F_p$ implies $x=y=0$.
+For integers $x,y$ not both zero, it follows that
+\[
+ v_p(x^2-xy+y^2)=2\min\{v_p(x),v_p(y)\}.
+\]
+\end{lemma}
+\begin{proof}
+If $y=0$, the equation gives $x=0$. Otherwise let $z=-x/y$ in
+$\mathbb F_p$. Then $z^2+z+1=0$, so $z^3=1$, whereas $z\ne1$
+because $p\ne3$. This would give an element of order $3$ in the group
+$\mathbb F_p^\times$ of order $p-1$, impossible when $p\equiv2\pmod3$.
+This also covers $p=2$. For the integer assertion, factor out
+$p^{2s}$, where $s=\min\{v_p(x),v_p(y)\}$. The remaining two arguments
+are not both zero modulo $p$, so their norm is not divisible by $p$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:main}]
+For an odd prime $p$, the primitive curvature quadruple cannot have exactly
+one coordinate nonzero modulo $p$. If that coordinate is $b_i$,
+\eqref{eq:integral} would give $b_i^2=3b_i^2$, or $2b_i^2=0$,
+in $\mathbb F_p$, a contradiction. Thus at least two curvatures are
+units modulo $p$, proving the first assertion by \eqref{eq:orders}.
+
+At $p=3$, equation \eqref{eq:integral} first implies
+$3\mid\sum b_i$. Writing $\sum b_i=3h$ then gives
+$\sum b_i^2=3h^2$. A nonzero square modulo $3$ equals $1$.
+Hence the number of curvatures not divisible by $3$ is a positive
+multiple of $3$ not exceeding $4$, and is therefore $3$.
+By \eqref{eq:orders}, exactly three radii have valuation $E$.
+The fourth radius has valuation zero, since otherwise the radii would
+have common factor $3$. Also $E>0$: if $E=0$, all four curvatures
+would be units modulo $3$.
+
+Now suppose $p\equiv2\pmod3$ and $E>0$. Relabel so that
+$t=b_1$ has valuation $E$, which is possible by primitivity of the
+radii and \eqref{eq:orders}. Some other curvature, say $a=b_2$,
+is a unit modulo $p$. Write $b_3=a+u$, $b_4=a+v$, and
+$S=b_2+b_3+b_4=3a+u+v$. Direct expansion of
+\eqref{eq:integral} yields
+\begin{equation}\label{eq:norm}
+ u^2-uv+v^2=t(S-t).
+\end{equation}
+Reducing modulo $p$ and applying Lemma \ref{lem:norm} shows
+$u\equiv v\equiv0\pmod p$. Thus the other three curvatures are units,
+and $S-t\equiv3a\not\equiv0\pmod p$. The right side of
+\eqref{eq:norm} has valuation exactly $E$. It is nonzero, and
+Lemma \ref{lem:norm} makes its valuation even. Formula
+\eqref{eq:orders} now gives the third assertion, including at $p=2$.
+
+Finally, whenever $p^k$ divides a radius, $1\le k\le E$.
+The maximum valuation occurs at least twice in each of the three cases,
+so at least two coordinates meet this threshold. Primitivity excludes
+all four coordinates meeting a positive threshold. The number meeting it
+is therefore $2$ or $3$, leaving exactly one or two indices other than $i$.
+\end{proof}
+
+\paragraph{Translation of the earlier norm theorem.}
+Write $\sum b_i=3h$ and set $c_i=h-b_i$. Then
+$\sum c_i=h$, $\sum c_i^2=h^2$, and
+$b_i=\sum_{j\ne i}c_j$. A common divisor of the $c_i$ divides $h$
+and every $b_i$, so their common gcd is one. Stong's theorem, also
+Northshield's Corollary 4.6, makes each positive $b_i$ an Eisenstein
+norm, whose valuation at $p\equiv2\pmod3$ is even by Lemma
+\ref{lem:norm}. Moreover Stong's displayed identity reads
+$b_3b_4=c_1^2+c_1c_2+c_2^2$. If $p\mid b_3$, anisotropy forces
+$c_1=c_2=0$ modulo $p$; the relation
+$b_3=c_1+c_2+c_4$ then gives $c_4=0$ modulo $p$.
+Primitivity forces $c_3\ne0$, so $b_1,b_2,b_4$ are units.
+This proves exactly the inert-prime pattern via the earlier theorem,
+including at $2$, without attributing the radius formulation to it.
+
+Both threshold counts occur even at a split prime. For $p=7$, the
+quadruple $(3,3,7,21)$ has two divisible coordinates, and
+$(12,21,28,84)$ has three. The quadruple $(1,3,3,3)$ illustrates why
+equal radii must be counted as separate coordinates.
+
+\section{Consequences for the same array}
+\begin{corollary}\label{cor:gcd}
+For any labeling of a quadruple in Theorem \ref{thm:main}, the number
+\[
+ x=\frac{r_1r_2r_3}
+ {r_4\gcd(r_1,r_2)\gcd(r_1,r_3)\gcd(r_2,r_3)}
+\]
+is a positive integer. Every prime factor of $x$ is congruent to $1$
+modulo $3$ and divides at least two of $r_1,r_2,r_3$.
+\end{corollary}
+\begin{proof}
+Fix a prime $p$, and sort the valuations of the first three radii as
+$\alpha\le\beta\le\gamma$. Put $\delta=v_p(r_4)$. The exponent of
+$p$ in the displayed rational number is
+\[
+ (\alpha+\beta+\gamma)
+ -(\alpha+\alpha+\beta)-\delta=\gamma-\alpha-\delta.
+\]
+If $\delta=0$, this is nonnegative. If $\delta>0$, primitivity
+forces $\alpha=0$, and the repeated-maximum conclusion of Theorem
+\ref{thm:main} forces $\delta\le\gamma$. It is again nonnegative.
+For $p=3$ or $p\equiv2\pmod3$, the valuation pattern is either
+$(0,0,0,0)$ or a permutation of $(0,E,E,E)$, and this exponent is
+zero in both cases. If the exponent is positive for a split prime, then
+$\gamma>\delta$; the maximum must therefore occur at least twice
+among the first three valuations. Thus $\beta=\gamma>0$.
+\end{proof}
+
+Rearranging the formula for $x$ gives precisely the algebraic part of Hohn's
+fourth-radius comment. It makes no assertion about frequencies of the
+possible values of $x$ or their prime factors.
+
+\begin{corollary}\label{cor:bounds}
+For a solution with $r_1\le r_2\le r_3\le r_4$, one has
+$r_2\le3r_1$ and $r_3\le4r_1$. Given $r_1,r_2,r_3$, there is at most
+one possible $r_4\ge r_3$. Consequently, only finitely many rows have a
+specified first radius.
+\end{corollary}
+\begin{proof}
+Set $X=1/r_1$, $Y=1/r_2$, $Z=1/r_3$, $W=1/r_4$, so
+$X\ge Y\ge Z\ge W>0$, and put $T=Y+Z+W$. Cauchy's inequality and
+\eqref{eq:radii} give
+$(X+T)^2\ge3X^2+T^2$, hence $X\le T\le3Y$.
+Let $F(X,Y,Z,W)=(X+Y+Z+W)^2-3(X^2+Y^2+Z^2+W^2)$.
+For $0<W\le Z$ its derivative in $W$ is positive. Therefore
+\[
+ 0=F(X,Y,Z,W)\le F(X,Y,Z,Z)
+ =6XZ-\tfrac32X^2-2(Y-Z-X/2)^2,
+\]
+which implies $Z\ge X/4$. Finally, the two roots of the quadratic
+equation for $W$ have sum $X+Y+Z>2Z$, so they cannot both lie in
+$(0,Z]$. These statements give the claimed radius bounds, uniqueness,
+and finiteness.
+\end{proof}
+
+\begin{corollary}\label{cor:membership}
+Membership of a positive integer $N$ in A389940 is decidable by a finite
+exact calculation. The calculation can also list every primitive sphere
+quadruple containing $N$.
+\end{corollary}
+\begin{proof}
+Any such ordered quadruple has $r_1\le N$, so Corollary
+\ref{cor:bounds} bounds $r_2\le3N$ and $r_3\le4N$.
+For each triple, put $a=r_2r_3$, $b=r_1r_3$, $c=r_1r_2$,
+$s=a+b+c$, and $D=3(s^2-2(a^2+b^2+c^2))$.
+The possible fourth radii are $2r_1r_2r_3/(s\pm\sqrt D)$.
+Keep positive integral values at least $r_3$ with common gcd one and a
+coordinate equal to $N$. A rational fourth radius makes $\sqrt D$
+rational, hence integral; thus integer square tests suffice.
+The finite list is empty exactly when $N$ is absent. This is an exhaustive
+membership procedure, not a direct formula for terms. A389940, COMMENTS,
+paragraph 3, asks whether terms can ``otherwise'' be found algorithmically;
+a non-enumerative interpretation of that question is not answered here.
+\end{proof}
+
+\begin{corollary}\label{cor:chain}
+There is no infinite nondecreasing sequence of positive rational radii
+whose consecutive quadruples are distinct sphere solutions of
+\eqref{eq:radii}. For real radii, any such sequence has constant ratio
+$\lambda$, where $\lambda>1$ is the largest real root of
+$z^4-z^3-z^2-z+1$ (the constant in A289917).
+\end{corollary}
+\begin{proof}
+Write $b_n=1/r_n$. For a shared triple the two possible curvatures
+sum to that triple's curvature sum, so distinct consecutive windows give
+$b_{n+4}=b_{n+1}+b_{n+2}+b_{n+3}-b_n$.
+The nonincreasing positive $b_n$ have a limit, and the recurrence makes
+that limit zero. Its characteristic polynomial has four distinct roots:
+$\lambda,\lambda^{-1}$ and two nonreal roots of modulus one. Indeed,
+division by $z^2$ reduces it to $s^2-s-3=0$, $s=z+z^{-1}$;
+one root $s$ exceeds $2$ and the other lies in $(-2,2)$.
+The standard general solution of this constant-coefficient recurrence
+therefore has only the $\lambda^{-n}$ component if it tends to zero:
+the growing component is excluded by boundedness, and a nonzero
+combination of the two unit-modulus components cannot tend to zero
+(its mean squared modulus is positive).
+Thus $b_n=C\lambda^{-n}$ with $C>0$.
+The rational-root test excludes rational $\lambda$, so rational
+radii are impossible. This proves the infinite-chain obstruction
+asserted in A390148, COMMENTS, paragraph 3, but not its conjecture
+of arbitrarily long finite primitive integer chains.
+\end{proof}
+
+\section{Repeated sphere radii}
+Write $\omega(x)$ for the number of distinct prime factors of $x$, with
+$\omega(1)=0$, and $\epsilon_3(x)=1$ if $3\mid x$, and $0$ otherwise.
+These are A001221 and A079978 on positive arguments.
+\begin{corollary}\label{cor:repeat}
+Every repeated radius is $3x^2$ for some positive integer $x$.
+For each $x$ there are exactly
+\[
+ 2^{\omega(x)-\epsilon_3(x)+1}
+\]
+ordered primitive sphere quadruples containing that radius at least twice.
+Explicitly, take $uv=x$, $\gcd(u,v)=1$, $3\nmid u$, and either sign in
+\[
+ A=u^2+3v^2\pm3uv.
+\]
+Sort the four numbers
+\begin{equation}\label{eq:repeat}
+ (3u^2v^2,\ 3u^2v^2,\ 3Av^2,\ Au^2).
+\end{equation}
+All the resulting quadruples are distinct. The only triple repetition
+is $(1,3,3,3)$.
+\end{corollary}
+\begin{proof}
+Repeated radii give repeated primitive curvatures, say $(A,A,B,C)$.
+Equation \eqref{eq:integral} becomes
+$(A-B-C)^2=3BC$. Interchange $B,C$ so that $v_3(B)$ is even and
+$v_3(C)$ is odd. Prime factorization gives
+$B=d u^2$, $C=3d v^2$ for a squarefree $d$ coprime to $3$.
+Then $A=d(u^2+3v^2\pm3uv)$. Primitivity forces $d=1$,
+$\gcd(u,v)=1$, and $3\nmid u$; otherwise a common prime divides
+$A,B,C$. Conversely these conditions make $A,B,C$ pairwise coprime:
+modulo a prime dividing $u$, $A\equiv3v^2$, and modulo a prime
+dividing $3v$, $A\equiv u^2$.
+Their least common multiple is $3Au^2v^2$, giving \eqref{eq:repeat}.
+The minus sign also gives $A>0$, since
+$u^2-3uv+3v^2=(u-3v/2)^2+3v^2/4$.
+
+Each prime-power factor of $x$ must belong wholly to $u$ or to $v$;
+the factor at $3$, if present, must belong to $v$. There are
+$2^{\omega(x)-\epsilon_3(x)}$ choices and two distinct signs.
+There is no overcounting: primitive radii uniquely recover primitive
+curvatures, their repeated coordinate $A$, and the remaining pair
+$\{B,C\}$; its square and three-times-square members distinguish $u,v$.
+If a third curvature equals $A$, either $A=u^2$ or $A=3v^2$.
+The first forces the minus sign and $u=v=1$; the second would force
+$u=3v$, contrary to $3\nmid u$. Thus even the triple-repetition case
+has a unique parameter choice. Four equal curvatures do not satisfy
+\eqref{eq:integral}.
+\end{proof}
+
+\section{The linked circle conjecture}
+Hohn's linked array A390583 \cite{circles} uses coefficient $2$ in
+\eqref{eq:radii}, not $3$. Its COMMENTS, paragraph 3, conjectures
+a cube-or-twice-a-cube difference when the largest two radii coincide.
+The following classification proves it, even without the largest-radius
+restriction.
+\begin{corollary}\label{cor:circle}
+Every primitive positive circle quadruple with repeated radii and
+distinct remaining radii has the form, up to permutation,
+\[
+ (a,b,c,c)=\frac1h
+ (u d^2,\ v d^2,\ 4uv(u+v),\ 4uv(u+v)),
+ \quad d=v-u>0,\quad \gcd(u,v)=1,
+\]
+where $h=\gcd(d^2,4(u+v))$. Consequently $b-a$ is a positive cube
+or twice a positive cube.
+\end{corollary}
+\begin{proof}
+Put $X=1/a$, $Y=1/b$, $Z=1/c$. The circle equation gives
+$(X-Y)^2=4Z(X+Y)$, so $a=b$ is impossible and
+$c=4ab(a+b)/(b-a)^2$. Writing $a/b=u/v$ in lowest terms yields
+the displayed vector after clearing denominators and dividing by its
+common gcd. Since $\gcd(d,uv)=1$, that gcd is precisely $h$.
+No odd prime divides $h$, because an odd prime dividing both $d$ and
+$u+v=2u+d$ would divide $u$ and $v$. If $d$ is odd, $h=1$.
+If $v_2(d)=1$, $u,v$ are odd, $4\mid u+v$, and $h=4$.
+If $v_2(d)\ge2$, $v_2(u+v)=1$ and $h=8$.
+Thus $b-a=d^3/h$ is respectively $d^3$, $2(d/2)^3$, or
+$(d/2)^3$. The formula also proves the converse parametrization.
+\end{proof}
+
+\begin{corollary}\label{cor:circlebounds}
+Ordered positive circle quadruples satisfy $r_1<r_2$,
+$r_2\le(3+2\sqrt3)r_1$, and
+\[
+ r_3\le\frac{4(1/r_1+1/r_2)}{(1/r_1-1/r_2)^2}.
+\]
+There is at most one $r_4\ge r_3$ for each triple, hence finitely
+many rows for each first radius. The following three repeated-radius
+families hold, with the second correcting the index in
+A390583, COMMENTS, paragraph 4:
+\[
+\begin{split}
+ &(k,k+1,4k(k+1)(2k+1),4k(k+1)(2k+1)),\\
+ &(k,k+2,2k(k+1)(k+2),2k(k+1)(k+2))\\
+ &\hspace{35mm}\text{for odd }k,\\
+ &(k,k+8,k(k+4)(k+8)/8,k(k+4)(k+8)/8)\\
+ &\hspace{35mm}\text{for }k\equiv2\pmod4.
+\end{split}
+\]
+\end{corollary}
+\begin{proof}
+Write $X\ge Y\ge Z\ge W>0$ for reciprocal radii and
+$G=(X+Y+Z+W)^2-2(X^2+Y^2+Z^2+W^2)$.
+If $X=Y$, then $G=4X(Z+W)-(Z-W)^2>0$, impossible.
+The derivative of $G$ in each of $Y,Z,W$, when that coordinate is
+at most $Y$, is positive. Hence
+$0=G\le G(X,Y,Y,Y)=-X^2+6XY+3Y^2$,
+giving the first bound. Also
+$0\le G(X,Y,Z,Z)=4Z(X+Y)-(X-Y)^2$, giving the second.
+The two roots for $W$ have sum $2(X+Y+Z)>2Z$, so at most one
+lies in $(0,Z]$. Substitute $b-a=1,2,8$ in
+$c=4ab(a+b)/(b-a)^2$ for the three families. They are integral
+and primitive: the first two have $\gcd(a,b)=1$, while in the
+third $\gcd(a,b)=2$ and $c$ is odd. Each has $c\ge b$.
+\end{proof}
+
+The source writes the second family's repeated radius as
+``A000447(k)*12''. The defining formula is
+\[
+ \mathrm{A000447}(n)=n(4n^2-1)/3.
+\]
+At $k=3$ the stated index gives $(3,5,420,420)$, which fails the
+circle equation:
+\[
+ \left(\sum 1/r_i\right)^2-2\sum 1/r_i^2=-4/315.
+\]
+The correct index is $(k+1)/2$. It gives repeated radius
+$2k(k+1)(k+2)$, hence $(3,5,120,120)$ at $k=3$.
+The first and third families agree with the stated A069074 and A061550
+indices, respectively \cite{circlefunctions}.
+
+\section{Coverage and verification}
+The following table distinguishes the mathematical assertions in the posing
+entry from its numerical observations and other questions.
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.27\linewidth}>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedright\arraybackslash}p{0.46\linewidth}@{}}
+\toprule
+Source item & Coverage & Statement\\
+\midrule
+\endhead
+A390148, C5 & Prior proof cited & Kontorovich's classification implies the $3$-adic pattern; Theorem \ref{thm:main} supplies a direct proof.\\[3pt]
+A390148, C6--C7 & Proved; prior arithmetic cited & Theorem \ref{thm:main}: all-prime thresholds and inert-prime pattern; Stong's norm argument gives the latter.\\[3pt]
+A390148, C9 & Proved in part & Corollary \ref{cor:gcd}: integrality and split-prime support. Frequency clauses: not covered.\\[3pt]
+A390148, C2 & Proved & Corollary \ref{cor:bounds}: both bounds, uniqueness, and finite rows per first radius.\\[3pt]
+A390148, C8 & Proved & Corollary \ref{cor:repeat}: exact count and classification of every repeated radius.\\[3pt]
+A390148, C3 & Proved in part & Corollary \ref{cor:chain}: no infinite rational chain. Arbitrarily long finite chains: not covered.\\[3pt]
+A390322, A388858, A390464, A390465 & Proved consequences & The four column definitions transfer the rowwise results; no column-only characterization is asserted.\\[3pt]
+A389940, C3: algorithm & Not covered as a direct construction & Corollary \ref{cor:membership} gives exhaustive finite membership (not posed; proved).\\[3pt]
+A389940, C2: examples & Finite check & The only containing rows for $1,4,36$ are the three rows listed there.\\[3pt]
+A389940, C3: gaps & Not covered & No asymptotic gap-growth statement.\\[3pt]
+A001221, A079978 & Definitions used & $\omega(x)$ and $\epsilon_3(x)$ in Corollary \ref{cor:repeat}.\\[3pt]
+A289917 & Proved consequence & Corollary \ref{cor:chain}: its quartic root is the only infinite real-chain ratio. Other formulas: not covered.\\[3pt]
+A390583, C2--C3 & Proved & Corollaries \ref{cor:circle}--\ref{cor:circlebounds}: cubic difference, bounds and uniqueness.\\[3pt]
+A390583, C4 & Refuted-and-corrected in part & Second-family index corrected by explicit example and formula; first and third families proved.\\[3pt]
+A069074, A000447, A061550 & Formulas used & Corollary \ref{cor:circlebounds} identifies the three polynomial families, with the A000447 index corrected.\\[3pt]
+A290508 & Not posed; proved & Corollary \ref{cor:circle} classifies its repeated-largest-radius subfamily; the general largest-radius sequence is not characterized.\\[3pt]
+A390583, C5 & Not covered & The arbitrarily-long-chain question remains outside these results.\\
+\bottomrule
+\end{longtable}
+Here C$n$ means the $n$th COMMENTS paragraph in the cited version.
+A390148 uses revision 23; A389940 uses revision 13 (5 November 2025);
+A390583 uses revision 10 (17 November 2025). Statements described as
+not covered are not counterexamples to their sources.
+
+\paragraph{Lean statements.}
+The declaration
+\href{https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean}{\texttt{SplitPrimeSphereRadii.result}}
+has exactly the positive, common-primitive, coefficient-three hypotheses
+above and the threshold-count conclusion for $p\equiv1\pmod3$.
+The declaration
+\href{https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/PrimitiveSphereRadii.lean}{\texttt{PrimitiveSphereRadii.primitive\_sphere\_radii\_v3}}
+has the $3$-adic pattern as its conclusion. The all-prime extension,
+inert-prime parity, and all corollaries are established by the written
+proofs above. Neither declaration asserts those additional conclusions.
+Both links pin revision \texttt{bed437cb2aa5a2d3570eb2241767ad6de36d77cc}.
+
+\paragraph{Exact finite checks.}
+The accompanying \texttt{verify.py} checks the reciprocal equation,
+primitivity, valuation patterns, all positive divisibility thresholds, and
+the gcd correction on all $1128$ quadruples in Hohn's $4512$-term table.
+It also enumerates the exact quadratic solutions in the bounds of
+Corollary \ref{cor:bounds} for $1\le r_1\le60$, obtaining the same $19$
+rows as the table. The containing-row checks for $1,4,36$ are exhaustive
+by Corollary \ref{cor:membership}. Further checks test the repeated-sphere
+parametrization for $x\le200$ and the circle parametrization for coprime
+$1\le u<v\le100$, including the three displayed circle families.
+All operations use integers or rational numbers.
+The input digest, ranges, and detailed counts are in
+\texttt{verification.json}; these finite checks illustrate the unbounded
+written proofs, rather than replacing them.
+
+\begin{thebibliography}{10}
+\bibitem{hohn}
+Charles L. Hohn, \emph{Entry A390148}, The On-Line Encyclopedia of Integer Sequences,
+revision 23, 17 November 2025, COMMENTS, the successive prime-divisibility
+and gcd-formula assertions.
+\url{https://oeis.org/A390148}.
+The exact revision is accessible from
+\url{https://oeis.org/history/view?seq=A390148&v=23}.
+
+\bibitem{circles}
+Charles L. Hohn, \emph{Entry A390583}, The On-Line Encyclopedia of Integer
+Sequences, revision 10, 17 November 2025, COMMENTS, paragraphs 2--5.
+\url{https://oeis.org/A390583}.
+
+\bibitem{values}
+Charles L. Hohn, \emph{Entry A389940}, The On-Line Encyclopedia of Integer
+Sequences, revision 13, 5 November 2025, COMMENTS, paragraphs 2--3.
+\url{https://oeis.org/A389940}.
+
+\bibitem{auxiliary}
+The On-Line Encyclopedia of Integer Sequences, entries
+\href{https://oeis.org/A001221}{A001221} and
+\href{https://oeis.org/A079978}{A079978} (arithmetic functions),
+\href{https://oeis.org/A289917}{A289917} (spiral ratio), and
+\href{https://oeis.org/A390322}{A390322},
+\href{https://oeis.org/A388858}{A388858},
+\href{https://oeis.org/A390464}{A390464},
+\href{https://oeis.org/A390465}{A390465} (columns).
+
+\bibitem{lmw}
+Jeffrey C. Lagarias, Colin L. Mallows, and Allan R. Wilks,
+\emph{Beyond the Descartes circle theorem},
+American Mathematical Monthly \textbf{109} (2002), no.~4, 338--361.
+\href{https://doi.org/10.1080/00029890.2002.11920896}{doi:10.1080/00029890.2002.11920896}.
+Theorem 1.2 in the author version,
+\url{https://arxiv.org/abs/math/0101066v1}.
+
+\bibitem{kontorovich}
+Alex Kontorovich, \emph{The local-global principle for integral Soddy
+sphere packings}, arXiv:1208.5441v1, 27 August 2012, Lemma 2.11,
+p.~9. \url{https://arxiv.org/abs/1208.5441v1}.
+Journal version: Journal of Modern Dynamics \textbf{15} (2019), 209--236,
+\href{https://doi.org/10.3934/jmd.2019019}{doi:10.3934/jmd.2019019}.
+
+\bibitem{mcgonagle}
+Annmarie McGonagle and Sam Northshield,
+\emph{A new parameterization of Ford circles}, Pi Mu Epsilon Journal
+\textbf{13} (2014), no.~10, 637--643, Section 6.
+\href{https://www.researchgate.net/publication/329218164_A_New_Parameterization_of_Ford_Circles}{Author manuscript},
+dated 12 November 2013, Section 6, pp.~8--9.
+
+\bibitem{stong}
+Richard Stong, solution of Sam Northshield's Problem 11671,
+\emph{If the sum of the squares is the square of the sum, \ldots},
+American Mathematical Monthly \textbf{122} (2015), no.~1, p.~76
+(additional solvers, p.~77).
+\href{https://doi.org/10.4169/amer.math.monthly.122.01.75}{doi:10.4169/amer.math.monthly.122.01.75}.
+
+\bibitem{northshield}
+Sam Northshield, \emph{Ford circles and spheres},
+arXiv:1503.00813v1, 3 March 2015, Theorem 4.4 and Corollary 4.6,
+pp.~13--14. \url{https://arxiv.org/abs/1503.00813v1}.
+
+\bibitem{circlefunctions}
+The On-Line Encyclopedia of Integer Sequences, entries
+\href{https://oeis.org/A069074}{A069074},
+\href{https://oeis.org/A000447}{A000447},
+\href{https://oeis.org/A061550}{A061550}, and
+\href{https://oeis.org/A290508}{A290508}.
+\end{thebibliography}
+
+\medskip
+\noindent\small Copyright 2026 Haobo Ma and Wenlin Zhang.
+Licensed under the Creative Commons Attribution 4.0 International License
+(\href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}).
+\end{document}

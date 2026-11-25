@@ -1,0 +1,355 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:hohn-a390148-split-prime-shared-divisibility:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "bed437cb2aa5a2d3570eb2241767ad6de36d77cc",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean"
+      },
+      "lineage": "collected:hohn-a390148-split-prime-shared-divisibility:s1",
+      "macros": {
+        "\\vp": "v_p"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hohn-a390148-split-prime-shared-divisibility",
+      "scope": "in_scope",
+      "statement": "Let $r_1,r_2,r_3,r_4$ be positive integers satisfying \\eqref{eq:radii}\nand having common gcd one. For any prime $p$, put\n$E=\\max_i v_p(r_i)$.\n\\begin{enumerate}\n\\item If $p\\equiv1\\pmod3$ and $E>0$, the maximum $E$ occurs at least\ntwice, and $\\min_i v_p(r_i)=0$.\n\\item For $p=3$, one has $E>0$ and the valuations are $(0,E,E,E)$,\nup to permutation.\n\\item If $p\\equiv2\\pmod3$ and $E>0$, including $p=2$, the valuations\nare $(0,E,E,E)$ up to permutation, and $E$ is even.\n\\end{enumerate}\nConsequently, for every prime $p$, integer $k\\ge1$, and coordinate $i$\nwith $p^k\\mid r_i$, exactly one or two indices $j\\ne i$ satisfy\n$p^k\\mid r_j$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong",
+      "toolchain": null,
+      "version": 2,
+      "work": "hohn-a390148-split-prime-shared-divisibility"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:hohn-a390148-split-prime-shared-divisibility:2:s2",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "bed437cb2aa5a2d3570eb2241767ad6de36d77cc",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean"
+      },
+      "lineage": "collected:hohn-a390148-split-prime-shared-divisibility:s2",
+      "macros": {
+        "\\vp": "v_p"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hohn-a390148-split-prime-shared-divisibility",
+      "scope": "in_scope",
+      "statement": "If $p\\equiv2\\pmod3$ is prime, then\n$x^2-xy+y^2=0$ in $\\mathbb F_p$ implies $x=y=0$.\nFor integers $x,y$ not both zero, it follows that\n\\[\n v_p(x^2-xy+y^2)=2\\min\\{v_p(x),v_p(y)\\}.\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong",
+      "toolchain": null,
+      "version": 2,
+      "work": "hohn-a390148-split-prime-shared-divisibility"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:hohn-a390148-split-prime-shared-divisibility:2:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "bed437cb2aa5a2d3570eb2241767ad6de36d77cc",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean"
+      },
+      "lineage": "collected:hohn-a390148-split-prime-shared-divisibility:s3",
+      "macros": {
+        "\\vp": "v_p"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hohn-a390148-split-prime-shared-divisibility",
+      "scope": "in_scope",
+      "statement": "For any labeling of a quadruple in Theorem \\ref{thm:main}, the number\n\\[\n x=\\frac{r_1r_2r_3}\n {r_4\\gcd(r_1,r_2)\\gcd(r_1,r_3)\\gcd(r_2,r_3)}\n\\]\nis a positive integer. Every prime factor of $x$ is congruent to $1$\nmodulo $3$ and divides at least two of $r_1,r_2,r_3$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong",
+      "toolchain": null,
+      "version": 2,
+      "work": "hohn-a390148-split-prime-shared-divisibility"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:hohn-a390148-split-prime-shared-divisibility:2:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "bed437cb2aa5a2d3570eb2241767ad6de36d77cc",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean"
+      },
+      "lineage": "collected:hohn-a390148-split-prime-shared-divisibility:s4",
+      "macros": {
+        "\\vp": "v_p"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hohn-a390148-split-prime-shared-divisibility",
+      "scope": "in_scope",
+      "statement": "For a solution with $r_1\\le r_2\\le r_3\\le r_4$, one has\n$r_2\\le3r_1$ and $r_3\\le4r_1$. Given $r_1,r_2,r_3$, there is at most\none possible $r_4\\ge r_3$. Consequently, only finitely many rows have a\nspecified first radius.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong",
+      "toolchain": null,
+      "version": 2,
+      "work": "hohn-a390148-split-prime-shared-divisibility"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:hohn-a390148-split-prime-shared-divisibility:2:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "bed437cb2aa5a2d3570eb2241767ad6de36d77cc",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean"
+      },
+      "lineage": "collected:hohn-a390148-split-prime-shared-divisibility:s5",
+      "macros": {
+        "\\vp": "v_p"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hohn-a390148-split-prime-shared-divisibility",
+      "scope": "in_scope",
+      "statement": "Membership of a positive integer $N$ in A389940 is decidable by a finite\nexact calculation. The calculation can also list every primitive sphere\nquadruple containing $N$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong",
+      "toolchain": null,
+      "version": 2,
+      "work": "hohn-a390148-split-prime-shared-divisibility"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:hohn-a390148-split-prime-shared-divisibility:2:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "bed437cb2aa5a2d3570eb2241767ad6de36d77cc",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean"
+      },
+      "lineage": "collected:hohn-a390148-split-prime-shared-divisibility:s6",
+      "macros": {
+        "\\vp": "v_p"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hohn-a390148-split-prime-shared-divisibility",
+      "scope": "in_scope",
+      "statement": "There is no infinite nondecreasing sequence of positive rational radii\nwhose consecutive quadruples are distinct sphere solutions of\n\\eqref{eq:radii}. For real radii, any such sequence has constant ratio\n$\\lambda$, where $\\lambda>1$ is the largest real root of\n$z^4-z^3-z^2-z+1$ (the constant in A289917).",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong",
+      "toolchain": null,
+      "version": 2,
+      "work": "hohn-a390148-split-prime-shared-divisibility"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s7",
+      "contributor": null,
+      "identity": "collected:hohn-a390148-split-prime-shared-divisibility:2:s7",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "bed437cb2aa5a2d3570eb2241767ad6de36d77cc",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean"
+      },
+      "lineage": "collected:hohn-a390148-split-prime-shared-divisibility:s7",
+      "macros": {
+        "\\vp": "v_p"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hohn-a390148-split-prime-shared-divisibility",
+      "scope": "in_scope",
+      "statement": "Every repeated radius is $3x^2$ for some positive integer $x$.\nFor each $x$ there are exactly\n\\[\n 2^{\\omega(x)-\\epsilon_3(x)+1}\n\\]\nordered primitive sphere quadruples containing that radius at least twice.\nExplicitly, take $uv=x$, $\\gcd(u,v)=1$, $3\\nmid u$, and either sign in\n\\[\n A=u^2+3v^2\\pm3uv.\n\\]\nSort the four numbers\n\\begin{equation}\n (3u^2v^2,\\ 3u^2v^2,\\ 3Av^2,\\ Au^2).\n\\end{equation}\nAll the resulting quadruples are distinct. The only triple repetition\nis $(1,3,3,3)$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong",
+      "toolchain": null,
+      "version": 2,
+      "work": "hohn-a390148-split-prime-shared-divisibility"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s8",
+      "contributor": null,
+      "identity": "collected:hohn-a390148-split-prime-shared-divisibility:2:s8",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "bed437cb2aa5a2d3570eb2241767ad6de36d77cc",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean"
+      },
+      "lineage": "collected:hohn-a390148-split-prime-shared-divisibility:s8",
+      "macros": {
+        "\\vp": "v_p"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hohn-a390148-split-prime-shared-divisibility",
+      "scope": "in_scope",
+      "statement": "Every primitive positive circle quadruple with repeated radii and\ndistinct remaining radii has the form, up to permutation,\n\\[\n (a,b,c,c)=\\frac1h\n (u d^2,\\ v d^2,\\ 4uv(u+v),\\ 4uv(u+v)),\n \\quad d=v-u>0,\\quad \\gcd(u,v)=1,\n\\]\nwhere $h=\\gcd(d^2,4(u+v))$. Consequently $b-a$ is a positive cube\nor twice a positive cube.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong",
+      "toolchain": null,
+      "version": 2,
+      "work": "hohn-a390148-split-prime-shared-divisibility"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s9",
+      "contributor": null,
+      "identity": "collected:hohn-a390148-split-prime-shared-divisibility:2:s9",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "bed437cb2aa5a2d3570eb2241767ad6de36d77cc",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean"
+      },
+      "lineage": "collected:hohn-a390148-split-prime-shared-divisibility:s9",
+      "macros": {
+        "\\vp": "v_p"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hohn-a390148-split-prime-shared-divisibility",
+      "scope": "in_scope",
+      "statement": "Ordered positive circle quadruples satisfy $r_1<r_2$,\n$r_2\\le(3+2\\sqrt3)r_1$, and\n\\[\n r_3\\le\\frac{4(1/r_1+1/r_2)}{(1/r_1-1/r_2)^2}.\n\\]\nThere is at most one $r_4\\ge r_3$ for each triple, hence finitely\nmany rows for each first radius. The following three repeated-radius\nfamilies hold, with the second correcting the index in\nA390583, COMMENTS, paragraph 4:\n\\[\n\\begin{split}\n &(k,k+1,4k(k+1)(2k+1),4k(k+1)(2k+1)),\\\\\n &(k,k+2,2k(k+1)(k+2),2k(k+1)(k+2))\\\\\n &\\hspace{35mm}\\text{for odd }k,\\\\\n &(k,k+8,k(k+4)(k+8)/8,k(k+4)(k+8)/8)\\\\\n &\\hspace{35mm}\\text{for }k\\equiv2\\pmod4.\n\\end{split}\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong",
+      "toolchain": null,
+      "version": 2,
+      "work": "hohn-a390148-split-prime-shared-divisibility"
+    }
+  ]
+}

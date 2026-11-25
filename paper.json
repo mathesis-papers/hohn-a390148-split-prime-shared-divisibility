@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 98374,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "ebfbcd0e0c5d827e9c430e68a6142d0b3a1b2eca206f4d486f6b09e94e21c460",
+      "sha256": "ebfbcd0e0c5d827e9c430e68a6142d0b3a1b2eca206f4d486f6b09e94e21c460"
+    },
+    "source": {
+      "bytes": 39188,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "a7a34f74b78f26a9241f0ab3790dae9337ce0f26b355a200926428e63d1a6718",
+      "sha256": "a7a34f74b78f26a9241f0ab3790dae9337ce0f26b355a200926428e63d1a6718"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "For Charles L. Hohn's conjectures in OEIS A390148, revision 23 (17 November 2025), COMMENTS, paragraphs 5–9, we give alternative proofs of the divisibility assertions using arithmetic already present in Kontorovich (2012, Lemma 2.11) and Stong (2015, p. 76), and prove the repeated-radius count. Every positive prime-power divisor of one primitive sphere radius divides exactly one or two other coordinates, with exact 3-adic and inert-prime valuation patterns. We classify repeated sphere radii, prove their stated multiplicity formula, and establish the infinite-rational-chain obstruction and an exhaustive finite membership procedure. For the linked circle array we prove the cube-or-twice-a-cube difference conjecture and correct the second repeated-radius family's sequence index.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "bed437cb2aa5a2d3570eb2241767ad6de36d77cc",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 98374,
+      "sha256": "ebfbcd0e0c5d827e9c430e68a6142d0b3a1b2eca206f4d486f6b09e94e21c460",
+      "url": "/api/v1/collected-papers/hohn-a390148-split-prime-shared-divisibility/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-25T16:24:55.877082950Z",
+    "record": "hohn-a390148-split-prime-shared-divisibility",
+    "repository_name": "hohn-a390148-split-prime-shared-divisibility",
+    "source": {
+      "bytes": 39188,
+      "sha256": "a7a34f74b78f26a9241f0ab3790dae9337ce0f26b355a200926428e63d1a6718",
+      "url": "/api/v1/collected-papers/hohn-a390148-split-prime-shared-divisibility/files/source?version=2"
+    },
+    "title": "Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-25T16:24:55.877082950Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "hohn-a390148-split-prime-shared-divisibility"
+  }
+}

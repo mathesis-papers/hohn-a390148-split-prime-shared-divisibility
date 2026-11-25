@@ -1,0 +1,15 @@
+{
+  "id": "hohn-a390148-split-prime-shared-divisibility",
+  "revision": 2,
+  "problem_ids": ["hohn-a390148-split-prime-shared-divisibility"],
+  "topic": "Prime-power divisibility and repeated radii in primitive tangent-sphere and tangent-circle quadruples",
+  "title": "Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong",
+  "creators": [
+    {"name": "Haobo Ma", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Wenlin Zhang", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "For Charles L. Hohn's conjectures in OEIS A390148, revision 23 (17 November 2025), COMMENTS, paragraphs 5–9, we give alternative proofs of the divisibility assertions using arithmetic already present in Kontorovich (2012, Lemma 2.11) and Stong (2015, p. 76), and prove the repeated-radius count. Every positive prime-power divisor of one primitive sphere radius divides exactly one or two other coordinates, with exact 3-adic and inert-prime valuation patterns. We classify repeated sphere radii, prove their stated multiplicity formula, and establish the infinite-rational-chain obstruction and an exhaustive finite membership procedure. For the linked circle array we prove the cube-or-twice-a-cube difference conjecture and correct the second repeated-radius family's sequence index.",
+  "summary": "Alternative elementary divisibility proofs credit earlier curvature and Eisenstein-norm results. Complete written proofs also classify repeated sphere and circle radii, establish the repeated-sphere count, exclude infinite ordered rational sphere chains, and correct A390583's A000447 index from k to (k+1)/2.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean"
+}

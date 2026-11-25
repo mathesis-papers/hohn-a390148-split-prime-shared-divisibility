@@ -1,0 +1,29 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 3260,
+      "sha256": "5f569489a94f7b99c9041c8dfe049d2f85199fe8897e491dbb2c4b827a4c384e"
+    },
+    "data/b390148.txt": {
+      "bytes": 46605,
+      "sha256": "50f1f6a5f9598aa3997b7fcd1f585a9576400aaffaaef2330505de5a1fd46b20"
+    },
+    "metadata.json": {
+      "bytes": 1882,
+      "sha256": "64433142a986f2036fba145543016316a5a655acc6380744981705052e03d7a6"
+    },
+    "note.tex": {
+      "bytes": 27629,
+      "sha256": "1925d6e7a5bd251b4317b546c2cd290118c1e296d01cd31eb96983c806315b65"
+    },
+    "verification.json": {
+      "bytes": 4175,
+      "sha256": "a3b0b7f73c38262388b5a2b63d60d6f5fc9191ba09e2d68dbdfdc153efc2898f"
+    },
+    "verify.py": {
+      "bytes": 13626,
+      "sha256": "a89c7cc2d66b803972fb5fe1fab623b920f3e2d78cea62c95ea2425b06da1b7b"
+    }
+  },
+  "schema_version": 1
+}
