@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24488909",
     "current_version": 2,
     "doi": "10.5281/zenodo.24488910",
+    "kind": "note",
     "lean_source": {
       "revision": "bed437cb2aa5a2d3570eb2241767ad6de36d77cc",
       "url": "https://github.com/the-omega-institute/trureturing/blob/bed437cb2aa5a2d3570eb2241767ad6de36d77cc/D5/S3/Arith/Descartes/SplitPrimeSphereRadii.lean"
@@ -55,10 +56,12 @@
     "title": "Alternative proofs of Hohn's divisibility conjectures after Kontorovich and Stong",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-25T16:24:55.877082950Z",
         "revision": "2",
-        "version": 2
+        "version": 2,
+        "version_label": null
       }
     ],
     "work": "hohn-a390148-split-prime-shared-divisibility"
